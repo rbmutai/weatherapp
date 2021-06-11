@@ -38,6 +38,7 @@ class Favourites: UIViewController, UITableViewDataSource, UITableViewDelegate, 
    
     func loadFavData(){
         favsarray.removeAll()
+        mapView.removeAnnotations(mapView.annotations)
         var fav=stfavs.components(separatedBy: "~")
         print("favs:\(fav)")
         for i in 0..<fav.count {
